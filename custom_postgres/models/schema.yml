@@ -1,0 +1,82 @@
+
+version: 2
+
+models:
+
+  - name: films_actors
+    description: "films' table with sum of the actors"
+    columns:
+      - name: film_id
+        description: "The unique identifier for each film."
+        tests:
+          - unique
+          - not_null
+
+      - name: title
+        description: "The title of the film."
+        tests:
+          - not_null
+
+      - name: release_date
+        description: "The release date of the film."
+        tests:
+          - not_null
+
+      - name: price
+        description: "The price of the film."
+        tests:
+          - not_null
+
+      - name: rating
+        description: "The MPAA rating of the film."
+
+      - name: user_rating
+        description: "The average user rating for the film."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['EXCELLENT', 'GOOD', 'AVARAGE', 'POOR']
+
+      - name: qtde_actor
+        description: "The number of actors in the film."
+        tests:
+          - not_null
+  
+  - name: films_category
+    description: "films' table with sum of the categories"
+    columns:
+      - name: film_id
+        description: "The unique identifier for each film."
+        tests:
+          - unique
+          - not_null
+
+      - name: title
+        description: "The title of the film."
+        tests:
+          - not_null
+
+      - name: release_date
+        description: "The release date of the film."
+        tests:
+          - not_null
+
+      - name: price
+        description: "The price of the film."
+        tests:
+          - not_null
+
+      - name: rating
+        description: "The MPAA rating of the film."
+
+      - name: user_rating
+        description: "The average user rating for the film."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['EXCELLENT', 'GOOD', 'AVARAGE', 'POOR']
+
+      - name: qtde_category
+        description: "The number of categories in the film."
+        tests:
+          - not_null

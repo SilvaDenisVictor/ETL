@@ -1,0 +1,16 @@
+sources:
+  - name: mask
+    database: destination_db
+    schema: public
+    tables:
+      - name: users
+        identifier: users
+      - name: films
+        identifier: films
+      - name: film_category
+        identifier: film_category    
+      - name: actors
+        identifier: actors
+      - name: film_actors
+        identifier: film_actors
+
