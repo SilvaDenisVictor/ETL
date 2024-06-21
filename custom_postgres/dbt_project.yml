@@ -32,10 +32,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   custom_postgres:
     films_stg:
-      +materialized: view
+      +materialized: ephemeral
     films_actors:
-      +materialized: view
+      +materialized: ephemeral
     films_category:
-      +materialized: view
+      +materialized: ephemeral
     films_cat_actor:
       +materialized: table
